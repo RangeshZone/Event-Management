@@ -1,0 +1,529 @@
+<html>
+<head>
+<title>Event Management</title>
+<link href="css/aos.css" rel="stylesheet"/>
+<script src="js/aos.js"></script>
+<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<script src="js/jquery.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/box_hover.css" rel="stylesheet"/>
+<script src="js/bootstrap.js"></script>
+<link href="css/card.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+</style>
+<script type="text/javascript">
+	$(window).on('scroll',function(){
+		if($(window).scrollTop()){
+			$('nav').addClass('black');
+		}
+		else{
+			$('nav').removeClass('black');
+		}
+	})
+</script>
+<head>
+</body>
+<nav>
+	<div class="logo">Your Logo</div>
+	<ul>
+		<li><a href="index.html#section-1">Home</a></li>
+		<li><a href="index.html#section-3">About Us</a></li>
+		<li><a href="index.html#section-2">Services</a></li>
+		<li><a href="index.html#section-5">Gallery</a></li>
+		<li><a href="index.html#section-4">Our Staff</a></li>
+		<li><a href="index.html#section-6">Blog</a></li>
+		<li><a href="index.html#section-7">Videos</a></li>
+		<li><a href="index.html#section-8">Contact</a></li>
+	</ul>
+</nav>
+<div class="sec1" id="section-1">
+	<div class="event_img">
+		<img class="img img-responsive" src="images/event3.jpg"/>
+	</div>
+	<div class="event_detail">
+		<h1>Latest Event Name</h1>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+		</p>
+		<!--Timer Start here-->
+		<table cellspacing="5" data-aos="zoom-in">
+		<tr><td ><p id="day" style="font-weight:bolder;font-size:30px;font-family:Rockwell;color:#00bcd4;"></p>Days</td>
+			<td><p id="hr" style="font-weight:bolder;font-size:30px;font-family:Rockwell;color:#00bcd4;"></p>Hours</td>
+			<td><p id="min" style="font-weight:bolder;font-size:30px;font-family:Rockwell;color:#00bcd4;"></p>Min</td>
+			<td><p id="sec" style="font-weight:bolder;font-size:30px;font-family:Rockwell;color:#00bcd4;"></p>Sec</td>
+		</tr>
+		</table>
+
+		<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("June 5, 2026 15:37:25").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+		  // Get today's date and time
+		  var now = new Date().getTime();
+			
+		  // Find the distance between now and the count down date
+		  var distance = countDownDate - now;
+			
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+		  // Output the result in an element with id="demo"
+		  document.getElementById("day").innerHTML = days;
+		  document.getElementById("hr").innerHTML = hours;
+		  document.getElementById("min").innerHTML = minutes;
+		  document.getElementById("sec").innerHTML = seconds;
+			
+		  // If the count down is over, write some text 
+		  if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("demo").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+		</script>
+		<!--Timer Ends here-->
+		
+		<a href="#" class="ticket_btn">Get Your Tickets</a>
+	</div>
+</div>
+
+<div class="container-fluid" style="overflow:hidden;">
+	<div class="row">
+		<div class="col-md-6 event_time1" data-aos="fade-right">
+			<span class="glyphicon glyphicon-calendar"></span>
+			<label>When</label>
+			<p>31st DEC 2019</p>
+			<p style="color:#000;font-size:15px;">starting at: 10:00 pm</p>
+		</div>
+		<div class="col-md-6 event_time2" data-aos="fade-left">
+			<span class="glyphicon glyphicon-calendar"></span>
+			<label>Where</label>
+			<p>Uk,London</p>
+			<p style="color:#000;font-size:15px;">Address here..</p>
+			
+		</div>
+	</div>
+</div>
+<!--Services Starts here -->
+<div class="container-fluid" id="section-2">
+	<br/><br/>		
+	<hr style="width:120px;height:2px;background:#d71280f2;"/>
+	<h2 class="contact_logo">Our Services</h2>
+	<hr style="width:120px;height:2px;background:#d71280f2;"/>
+	<br/><br/>		
+	<div class="row">
+		<div class="col-md-3 service">
+			<span class="glyphicon glyphicon-music"></span>
+			<h2>DJ Music</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+		<div class="col-md-3 service">
+			<span class="glyphicon glyphicon-List"></span>
+			<h2>Food & Drink</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+		<div class="col-md-3 service">
+			<span class="glyphicon glyphicon-star"></span>
+			<h2>Fireworks</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+		<div class="col-md-3 service">
+			<span class="glyphicon glyphicon-cd"></span>
+			<h2>Rain Dance</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	<br/><br/>		
+</div>
+<!--Services Ends here -->
+
+<!--About Us Starts here -->
+<div class="container-fluid abt"  id="section-3">
+	<div class="row">
+		<div class="col-md-8 about_us" >
+			<h1>About Us</h1>
+			<label data-aos="flip-down">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+			<p data-aos="flip-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+				when an unknown printer took a galley of type and scrambled it to make a type
+				specimen book. It has survived not only five centuries, but also the leap into
+				electronic typesetting, remaining essentia
+			</p>
+		</div>
+		<div class="col-md-4" style="overflow:hidden;">
+			<a href="#" class="play"><img src="images/play.png" style="max-width:200px;" class="img img-responsive"/></a>
+		</div>
+		
+	</div>
+</div>
+<!--About Us Ends here-->
+
+<!--Card View Start-->
+<div class="container-fluid"  id="section-4">
+		<br/><br/>
+		<hr style="width:120px;height:3px;background:#d71280f2;"/>
+		<h2 class="contact_logo">Our Staff</h2>
+		<hr style="width:120px;height:2px;background:#d71280f2;"/>
+		<br/><br/>		
+	<div class="row ">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card_img">
+					<img src="images/s6.jpg"/>
+				</div>
+				<div class="card_content">
+					<h2>Sofia<br><span>(Manager)</span></h2>
+					<p>(+01) 9*******</p>
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card_img">
+					<img src="images/s1.jpg"/>
+				</div>
+				<div class="card_content">
+					<h2>Chris<br><span>(Event-Manager)</span></h2>
+					<p>(+01) 9*******</p>
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div><div class="col-md-3">
+			<div class="card">
+				<div class="card_img">
+					<img src="images/s5.jpg"/>
+				</div>
+				<div class="card_content">
+					<h2>Ashley<br><span>(Team Manager)</span></h2>
+					<p>(+01) 9*******</p>
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div><div class="col-md-3">
+			<div class="card">
+				<div class="card_img">
+					<img src="images/s4.jpg"/>
+				</div>
+				<div class="card_content">
+					<h2>Edward<br><span>(CEO & Founder)</span></h2>
+					<p>(+01) 9*******</p>
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Card View End-->
+
+<br/><br/>
+<!--Box Hover start -->
+<div class="container"  id="section-5" style="overflow:hidden;">
+	<br/><br/>		
+	<hr style="width:120px;height:2px;background:#d71280f2;"/>
+	<h2 class="contact_logo">Our Gallery</h2>
+	<hr style="width:120px;height:2px;background:#d71280f2;"/>
+	<br/><br/>		
+	<div class="row">
+		<div class="col-md-4" data-aos="fade-down-right">
+			<div class="box">
+				<div class="imgbox">
+					<img class="img img-responsive" src="images/Dinner_event.jpg"/>
+				</div>
+				<a href="#">
+				 <div class="content">
+					<h2>Dinner</h2>
+					<p>Lorem ipsum, or lipsum as it is sometimes known, 
+						is dummy text used in laying out print, graphic or web designs. </p>
+				 </div>
+				</a>
+			</div>
+		</div>
+	
+		<div class="col-md-4" data-aos="fade-down">
+			<div class="box">
+				<div class="imgbox">
+					<img class="img img-responsive" src="images/music.jpg"/>
+				</div>
+				<a href="#">
+				 <div class="content">
+					<h2>Music</h2>
+					<p>Lorem ipsum, or lipsum as it is sometimes known, 
+						is dummy text used in laying out print, graphic or web designs. </p>
+				 </div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="col-md-4" data-aos="fade-down-left">
+			<div class="box">
+				<div class="imgbox">
+					<img class="img img-responsive" src="images/dance_event.jpg"/>
+				</div>
+				<a href="#">
+				 <div class="content">
+					<h2>Dance</h2>
+					<p>Lorem ipsum, or lipsum as it is sometimes known, 
+						is dummy text used in laying out print, graphic or web designs. </p>
+				 </div>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-4" data-aos="fade-up-right">
+			<div class="box">
+				<div class="imgbox">
+					<img class="img img-responsive" src="images/event2.jpg"/>
+				</div>
+				<a href="#">
+				 <div class="content">
+					<h2>Party</h2>
+					<p>Lorem ipsum, or lipsum as it is sometimes known, 
+						is dummy text used in laying out print, graphic or web designs. </p>
+				 </div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="col-md-4"  data-aos="fade-up">
+			<div class="box">
+				<div class="imgbox">
+					<img class="img img-responsive" src="images/party_drink.jpg"/>
+				</div>
+				<a href="#">
+				 <div class="content">
+					<h2>Party Drinks</h2>
+					<p>Lorem ipsum, or lipsum as it is sometimes known, 
+						is dummy text used in laying out print, graphic or web designs. </p>
+				 </div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="col-md-4" data-aos="fade-up-left">
+			<div class="box">
+				<div class="imgbox">
+					<img class="img img-responsive" src="images/party_firework.jpg"/>
+				</div>
+				<a href="#">
+				 <div class="content">
+					<h2>Party Fireworks</h2>
+					<p>Lorem ipsum, or lipsum as it is sometimes known, 
+						is dummy text used in laying out print, graphic or web designs. </p>
+				 </div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</br></br>
+<!--Box Hover End -->
+
+<!--Blog Start Here -->
+	<br/><br/>		
+	<hr style="width:120px;height:2px;background:#d71280f2;"/>
+	<h2 class="contact_logo">Our Blogs</h2>
+	<hr style="width:120px;height:2px;background:#d71280f2;"/>
+	<br/><br/>		
+<div id="section-6" class="container-fluid" style="padding:10px;background:url('images/abut_ev2.jpg') no-repeat;background-size:cover;background-attachment:fixed;overflow:hidden;">
+	<div class="row bgl">
+		<div class="col-md-7 blog_img" style="overflow:hidden;"  data-aos="fade-right">
+			<div class="dd">
+				<img src="images/event2.jpg" class="img img-responsive"/>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+		<div class="col-md-4 blog_detail">
+			<h2>Heading 1</h2>
+			<h4>By Admin - Nov 25th ,2018</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing 
+				and typesetting industry. Lorem Ipsum has been the 
+				industry's standard dummy text ever since the 1500s,
+				when an unknown printer took a galley of type and scrambled.
+			</p>
+		</div>
+	</div>
+	<div class="row bgl"  style="overflow:hidden;">
+		<div class="col-md-5 blog_detail">
+			<h2>Heading 2</h2>
+			<h4>By Admin - Nov 25th ,2018</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing 
+				and typesetting industry. Lorem Ipsum has been the 
+				industry's standard dummy text ever since the 1500s,
+				when an unknown printer took a galley of type and scrambled.
+			</p>
+		</div>
+		<div class="col-md-1"></div>
+		<div class="col-md-7 blog_img" data-aos="fade-left">
+			<div class="dd">
+				<img src="images/event1.jpg" class="img img-responsive"/>
+			</div>
+		</div>
+	</div>
+	<div class="row bgl">
+		<div class="col-md-7 blog_img" data-aos="fade-right">
+			<div class="dd">
+				<img src="images/party_firework.jpg" class="img img-responsive"/>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+		<div class="col-md-5 blog_detail">
+			<h2>Heading 3</h2>
+			<h4>By Admin - Nov 25th ,2018</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing 
+				and typesetting industry. Lorem Ipsum has been the 
+				industry's standard dummy text ever since the 1500s,
+				when an unknown printer took a galley of type and scrambled.
+			</p>
+		</div>
+	</div>
+	</div>
+<!--Blog End Here-->
+
+<!--Videos Start Here-->
+<div class="container-fluid" id="section-7">
+	<br/><br/>		
+	<hr style="width:120px;height:2px;background:#d71280f2;"/>
+	<h2 class="contact_logo">Our Videos</h2>
+	<hr style="width:120px;height:2px;background:#d71280f2;"/>
+	<br/><br/>		
+	<div class="row" style="padding-left:60px;">
+	<h2 class="video_head">Latest Videos</h2>
+		<div class="col-md-4">
+			<iframe width="400" height="250" class="video_frame" src="https://www.youtube.com/embed/CEUdz5SqsMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="col-md-4">
+			<iframe width="400" height="250" class="video_frame" src="https://www.youtube.com/embed/CEUdz5SqsMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="col-md-4">
+			<iframe width="400" height="250" class="video_frame" src="https://www.youtube.com/embed/CEUdz5SqsMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	
+	<div class="row" style="padding-left:60px;">
+	<h2 class="video_head">Live Concert Videos</h2>
+		<div class="col-md-4">
+			<iframe width="400" height="250" class="video_frame" src="https://www.youtube.com/embed/CEUdz5SqsMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="col-md-4">
+			<iframe width="400" height="250" class="video_frame" src="https://www.youtube.com/embed/CEUdz5SqsMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="col-md-4">
+			<iframe width="400" height="250" class="video_frame" src="https://www.youtube.com/embed/CEUdz5SqsMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+
+</div>
+<!--Videos Ends Here-->
+
+<!--Contact Start Here-->
+<br/><br/>
+<div class="contact" id="section-8">
+<hr style="width:120px;height:2px;background:#d71280f2;"/>
+<h2 class="contact_logo">Contact Us</h2>
+<hr style="width:120px;height:3px;background:#d71280f2;"/>
+<br/><br/>
+<div class="container-fluid">
+	<div class="row container-fluid">
+		<div class="col-md-4 contact_box">
+			<span class="glyphicon glyphicon-home"></span>
+			<h3>Location</h3>
+			<p>XYZ Address</p>
+		</div>
+		<div class="col-md-4 contact_box">
+			<span class="glyphicon glyphicon-phone"></span>
+			<h3>Contact</h3>
+			<p>(+01) 987*******</p>
+		</div>
+		<div class="col-md-4 contact_box">
+		<span class="glyphicon glyphicon-envelope"></span>
+			<h3>Email</h3>
+			<p>XYZ@event.com</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		<form class="contact_form">
+			<input type='text' name="name" placeholder="Enter your full name*" required />
+			<input type='text' name="email" placeholder="Enter your email*" required />
+			<input type='text' name="contact" placeholder="Contact No*" required /></br>
+			<label style="margin-left:20px;margin-bottom:0px;">Your Message:</label><br/>
+			<textarea name="message">
+			</textarea>
+			</br>
+			<input type="submit" name="submit" value="Submit"/>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+<br/><br/>
+<!--Contact End Here-->
+
+<!--Footer Start Here-->
+<div class="container-fluid" style="background:#262626;padding-top:10px;padding-bottom:10px;padding-left:50px;">
+	<div class="row " style="overflow:hidden;">
+		<div class="col-md-3 event_footer" data-aos="flip-up">
+			<span class="glyphicon glyphicon-pushpin"></span>
+			<label>Location</label>
+			<p>XYZ,Country </p>
+		</div>
+		<div class="col-md-3 event_footer" data-aos="flip-up">
+			<span class="glyphicon glyphicon-link"></span>
+			<label>Tickets</label>
+			<p>50 Tickets</p>
+		</div>
+		<div class="col-md-3 event_footer" data-aos="flip-up">
+			<span class="glyphicon glyphicon-calendar"></span>
+			<label>Events</label>
+			<p>20+ Events</p>
+		</div>
+		<div class="col-md-3 event_footer" data-aos="flip-up">
+			<span class="glyphicon glyphicon-user"></span>
+			<label>Customers</label>
+			<p>12,000+</p>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+<div class="row footer">
+	<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+	<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+	<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+	<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+	<hr/>
+	<p>&copy; 2019 All Rights Reserved | Designed by Rangesh</p>
+</div>
+</div>
+<!--Footer end Here-->
+
+<!--Animation Starts Here-->
+<script>
+AOS.init({
+	offset:200,
+	duration:1500,
+})
+</script>
+<!--Animation Ends here-->
+</body>
+</html>
